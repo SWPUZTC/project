@@ -1,0 +1,55 @@
+@import "tailwindcss";
+/* 滚动条轨道（背景） */
+::-webkit-scrollbar {
+    width: 8px;  /* 垂直滚动条宽度 */
+    height: 100px; /* 水平滚动条高度 */
+  }
+  
+  /* 滚动条滑块（圆柱形） */
+  ::-webkit-scrollbar-thumb {
+    height: 40px;
+    background: #fff;          /* 滑块颜色 */
+    border-radius: 6px;        /* 圆角（圆柱效果关键） */
+  }
+  
+  /* 鼠标悬停时滑块颜色 */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+  }
+
+  .hover-popover {
+    &:hover {
+      color: #0084FF;
+    }
+  }
+  .hover-icon {
+    &:hover {
+      .icon {
+        animation: hoverEffect 0.8s forwards; /* 应用动画 */
+      }
+    }
+  }
+  
+  @keyframes hoverEffect {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.05);
+    }
+    50% {
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .chat-active {
+    background-color: rgb(34 211 238);
+  }
+  
+  
